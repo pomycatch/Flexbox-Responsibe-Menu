@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flexbox Corporate Template</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+	<script>
+		$(function(){
+			$('button').click(function(){
+				$(".main-menu").toggle();		
+			});
+
+			$(".main-menu ul li a").each(function() {
+				if ($(this).next().length > 0) {
+				//	$(this).parent().addClass("parent");
+					$(this).append("<i class='fa fa-caret-down'></i>");
+				}
+			});
+
+			$('.main-menu ul li a, .second-level li a').click(function(e){
+				var a_href = $(this).attr('href');
+				if (a_href == '#')
+					e.preventDefault();
+					console.log(a_href);
+				$(this).next().toggle('slow');
+			});
+		});
+	</script>
+	
+</head>
+
+<body>
+	<header>
+	<div class="first">
+		<div class="logo">
+			<img src="logo.png" alt="logo">
+		</div>
+		
+		<button type="button" class="nav-button">
+				<span class="button-bar"></span>
+				<span class="button-bar"></span>
+				<span class="button-bar"></span>
+		</button>
+	</div>
+	<div class="second">
+		<nav class="main-menu">
+
+			<ul>
+				<li class="first-level">
+					<a href="#">Home</a>
+					<ul class="second-level">
+						<li><a href="#">Position 1</a></li>
+						<li><a href="#">Position 2</a></li>
+						<li><a href="#">Position 3</a></li>
+						<li><a href="#">Position 4</a></li>
+					</ul>
+				</li>
+
+				<li class="first-level">
+					<a href="#">About Us</a>
+					<ul class="second-level">
+						<li><a href="#">Position 1</a></li>
+						<li><a href="#">Check this</a>
+							<ul class="third-level">
+								<li><a href="#">Position 1</a></li>
+								<li><a href="test1.html">Position 2</a></li>
+								<li><a href="#">Position 3</a></li>
+								<li><a href="#">Position 4</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Position 3</a></li>
+						<li><a href="#">Check</a>
+							<ul class="third-level">
+								<li><a href="test1.html">Position 1</a></li>
+								<li><a href="#">Position 2</a></li>
+								<li><a href="#">Position 3</a></li>
+								<li><a href="test2.html">Position 4</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+
+				<li class="first-level">
+					<a href="test2.html">Services</a>
+				</li>
+				<li class="first-level">
+					<a href="#">Portfolio</a>
+				</li>
+				<li class="first-level">
+					<a href="#">Pricing</a>
+				</li>
+				<li class="first-level">
+					<a href="#">Contact</a>
+				</li>
+			</ul>
+		</nav>
+		</div>
+	</header>
+
+	<section>
+		<h1>Section</h1>
+	</section>
+
+</body>
+</html>
