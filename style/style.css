@@ -124,7 +124,7 @@ section {
           .main-menu ul li .second-level li:hover .third-level {
             position: absolute;
             display: block !important;
-            top: 10px;
-            left: 100%; } }
+            left: 100%;
+            margin-top: -34px; } }
 
 /*# sourceMappingURL=style.css.map */
