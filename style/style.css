@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  padding: 0; }
+
+header {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  clear: both;
+  border-bottom: 1px solid #999;
+  box-shadow: 0px 2px 4px #999; }
+  header .container-logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 20px 10px; }
+    header .container-logo .logo img {
+      height: 50px; }
+    header .container-logo .nav-button {
+      padding: 0px 12px;
+      background-color: transparent;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      height: 40px; }
+      header .container-logo .nav-button:hover {
+        background-color: #ddd;
+        cursor: pointer; }
+      header .container-logo .nav-button:focus {
+        outline: none; }
+      header .container-logo .nav-button .button-bar {
+        display: block;
+        color: #333;
+        width: 22px;
+        height: 2px;
+        background-color: #888;
+        margin-top: 4px; }
+        header .container-logo .nav-button .button-bar:first-child {
+          margin-top: 0px; }
+  header .container-menu .main-menu {
+    display: none; }
+  header .container-menu .main-menu {
+    position: relative;
+    width: 100%;
+    margin-top: 40px;
+    left: 0;
+    background-color: #333; }
+    header .container-menu .main-menu ul {
+      margin: 0;
+      padding: 0;
+      display: block; }
+      header .container-menu .main-menu ul li a {
+        list-style-type: none;
+        padding: 14px 10px;
+        border-bottom: 1px solid #999999;
+        text-decoration: none;
+        color: #fff;
+        font-size: 18px;
+        display: block;
+        font-size: 12px;
+        font-weight: 700;
+        font-family: Montserrat, sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 1px; }
+        header .container-menu .main-menu ul li a i {
+          margin-left: 5px; }
+      header .container-menu .main-menu ul li ul {
+        display: none; }
+      header .container-menu .main-menu ul li .second-level {
+        background-color: #404040; }
+      header .container-menu .main-menu ul li ul.second-level li a {
+        padding: 10px 16px; }
+      header .container-menu .main-menu ul li ul.second-level li .third-level {
+        background-color: #4d4d4d; }
+        header .container-menu .main-menu ul li ul.second-level li .third-level li a {
+          padding: 8px 22px; }
+
+section {
+  display: flex;
+  margin-top: 30px;
+  background-color: #333;
+  height: 400px; }
+
+/*phone */
+@media only screen and (min-width: 992px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 100px; }
+
+  button {
+    display: none; }
+
+  .second-level {
+    display: none !important; }
+
+  .third-level {
+    display: none !important; }
+
+  nav {
+    display: block !important; }
+
+  .main-menu {
+    margin-top: 24px !important; }
+    .main-menu ul li {
+      float: left;
+      list-style-type: none;
+      margin-left: 10px; }
+      .main-menu ul li a {
+        color: red !important;
+        border-bottom: none !important;
+        background-color: blue; }
+      .main-menu ul li:hover .second-level {
+        display: block !important; }
+      .main-menu ul li:last-child .second-level:hover .third-level {
+        left: -95%; }
+      .main-menu ul li .second-level {
+        position: absolute; }
+        .main-menu ul li .second-level li {
+          float: none !important;
+          margin-left: 0px;
+          text-align: center; }
+          .main-menu ul li .second-level li a {
+            background-color: yellow; }
+          .main-menu ul li .second-level li:hover .third-level {
+            position: absolute;
+            display: block !important;
+            top: 10px;
+            left: 100%; } }
+
+/*# sourceMappingURL=style.css.map */
