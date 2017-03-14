@@ -13,9 +13,9 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 20px 20px 10px; }
+    padding: 13px 20px 6px; }
     header .container-logo .logo img {
-      height: 50px; }
+      height: 36px; }
     header .container-logo .nav-button {
       padding: 0px 12px;
       background-color: transparent;
@@ -41,7 +41,6 @@ header {
   header .container-menu .main-menu {
     position: relative;
     width: 100%;
-    margin-top: 40px;
     left: 0;
     background-color: #333; }
     header .container-menu .main-menu ul {
@@ -51,7 +50,6 @@ header {
       header .container-menu .main-menu ul li a {
         list-style-type: none;
         padding: 14px 10px;
-        border-bottom: 1px solid #999999;
         text-decoration: none;
         color: #fff;
         font-size: 18px;
@@ -61,18 +59,24 @@ header {
         font-family: Montserrat, sans-serif;
         text-transform: uppercase;
         letter-spacing: 1px; }
+        header .container-menu .main-menu ul li a:hover {
+          background-color: #4d4d4d; }
         header .container-menu .main-menu ul li a i {
           margin-left: 5px; }
       header .container-menu .main-menu ul li ul {
         display: none; }
       header .container-menu .main-menu ul li .second-level {
-        background-color: #404040; }
-      header .container-menu .main-menu ul li ul.second-level li a {
-        padding: 10px 16px; }
-      header .container-menu .main-menu ul li ul.second-level li .third-level {
         background-color: #4d4d4d; }
+      header .container-menu .main-menu ul li ul.second-level li a {
+        padding: 12px 20px; }
+        header .container-menu .main-menu ul li ul.second-level li a:hover {
+          background-color: #666666; }
+      header .container-menu .main-menu ul li ul.second-level li .third-level {
+        background-color: #666666; }
         header .container-menu .main-menu ul li ul.second-level li .third-level li a {
-          padding: 8px 22px; }
+          padding: 10px 30px; }
+          header .container-menu .main-menu ul li ul.second-level li .third-level li a:hover {
+            background-color: gray; }
 
 section {
   display: flex;
@@ -85,7 +89,8 @@ section {
   header {
     flex-direction: row;
     justify-content: space-between;
-    padding: 0px 100px; }
+    padding: 0px 100px;
+    background-color: #333333; }
 
   button {
     display: none; }
@@ -99,32 +104,31 @@ section {
   nav {
     display: block !important; }
 
-  .main-menu {
-    margin-top: 24px !important; }
-    .main-menu ul li {
-      float: left;
-      list-style-type: none;
-      margin-left: 10px; }
-      .main-menu ul li a {
-        color: red !important;
-        border-bottom: none !important;
-        background-color: blue; }
-      .main-menu ul li:hover .second-level {
-        display: block !important; }
-      .main-menu ul li:last-child .second-level:hover .third-level {
-        left: -95%; }
-      .main-menu ul li .second-level {
-        position: absolute; }
-        .main-menu ul li .second-level li {
-          float: none !important;
-          margin-left: 0px;
-          text-align: center; }
-          .main-menu ul li .second-level li a {
-            background-color: yellow; }
-          .main-menu ul li .second-level li:hover .third-level {
-            position: absolute;
-            display: block !important;
-            left: 100%;
-            margin-top: -34px; } }
+  .main-menu ul li {
+    float: left;
+    list-style-type: none;
+    margin-left: 10px; }
+    .main-menu ul li a {
+      padding: 25px 10px !important;
+      color: #fff !important;
+      border-bottom: none !important;
+      cursor: pointer; }
+    .main-menu ul li:hover .second-level {
+      display: block !important; }
+    .main-menu ul li:last-child .second-level:hover .third-level {
+      left: -88%; }
+    .main-menu ul li .second-level {
+      position: absolute; }
+      .main-menu ul li .second-level li {
+        float: none !important;
+        margin-left: 0px;
+        text-align: center; }
+        .main-menu ul li .second-level li a {
+          padding: 10px 24px !important; }
+        .main-menu ul li .second-level li:hover .third-level {
+          position: absolute;
+          display: block !important;
+          left: 100%;
+          margin-top: -34px; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -19,10 +19,10 @@ header{
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		padding: 20px 20px 10px;
+		padding: 13px 20px 6px;
 
 		.logo img{
-			height: 50px;
+			height: 36px;
 		}
 
 		.nav-button{
@@ -57,7 +57,7 @@ header{
 
 
 	.container-menu{
-		
+
 		.main-menu{
 			display: none;
 		}
@@ -65,7 +65,6 @@ header{
 		.main-menu{
 			position: relative;
 			width: 100%;
-			margin-top: 40px;
 			left: 0;
 			background-color: #333;
 
@@ -73,12 +72,11 @@ header{
 				margin: 0;
 				padding: 0;
 				display: block;
-
 				li{
+
 					a{
 						list-style-type: none;
-						padding: 14px 10px;
-						border-bottom: 1px solid #999999;
+						padding: 14px 10px;					
 						text-decoration: none;
 						color: #fff;
 						font-size: 18px;
@@ -88,26 +86,37 @@ header{
 						font-family: Montserrat, sans-serif;
 						text-transform: uppercase;
 						letter-spacing: 1px;
-					
+						&:hover{
+							background-color: lighten(#333333, 10%);
+						}
 						i{
 							margin-left: 5px;
 						}
 					}
+
 					ul{
 						display: none;
 					}
 					.second-level{
-						background-color: #404040;
+						background-color: lighten(#333333, 10%);
 					}
-
+					// ul.second-level{
+					// 	border-bottom: 1px solid orange;
+					// }
 					ul.second-level li{ 
 						a{
-							padding: 10px 16px;
+							padding: 12px 20px;
+							&:hover{
+								background-color: lighten(#333333, 20%);
+							}
 						}
 						.third-level{
-							background-color: #4d4d4d;
+							background-color: lighten(#333333, 20%);
 							li a{
-								padding: 8px 22px;
+								padding: 10px 30px;
+								&:hover{
+									background-color: lighten(#333333, 30%);
+								}
 							}
 						}
 					}
@@ -145,6 +154,7 @@ section{
 		flex-direction: row;
 		justify-content: space-between;
 		padding: 0px 100px;
+		background-color: #333333;
 	}
 	button{
 		display: none;
@@ -163,22 +173,23 @@ section{
 	}
 	
 	.main-menu{
-		margin-top: 24px!important;
 		ul li{
 			float: left;
 			list-style-type: none;
 			margin-left: 10px;
 			a{
-				color: red!important;
+				padding: 25px 10px!important;
+				color: #fff!important;
 				border-bottom: none!important;
-				background-color: blue;
+				cursor: pointer;
 			}
+
 			&:hover .second-level{
 				display: block!important;
 			}
 			&:last-child{
 				.second-level:hover .third-level{
-					left: -95%;
+					left: -88%;
 				}
 			}
 			.second-level{
@@ -188,7 +199,7 @@ section{
 					margin-left: 0px;
 					text-align: center;
 					a{
-						background-color: yellow;
+						padding: 10px 24px!important;
 					}
 					&:hover .third-level{
 						position: absolute;
