@@ -1,6 +1,8 @@
 $phone: "only screen and (min-width: 768px)";
 $tablet: "only screen and (min-width: 992px)";
 $desktop: "only screen and (min-width: 1200px)";
+$background-menu-color: #333333;
+$menu-link-color: #fff;
 
 body{
 	margin: 0;
@@ -10,8 +12,8 @@ body{
 header{
 	display: flex;
 	flex-direction: column;
-	margin: 0 auto;
 	clear: both;
+	margin: 0 auto;
 	border-bottom: 1px solid #999;
 	box-shadow: 0px 2px 4px #999;
 
@@ -19,41 +21,47 @@ header{
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		padding: 13px 20px 6px;
-
-		.logo img{
-			height: 36px;
+		padding: 10px 20px 10px;
+		background-color: #333333;
+	
+		.logo h2{
+			margin: 0px;
+			color: #fff;
 		}
 
 		.nav-button{
-			padding: 0px 12px;
+			height: 34px;
+			padding: 0px 10px;
 			background-color: transparent;
-			border: 1px solid #ddd;
+			border: 1px solid #fff;
 			border-radius: 4px;
-			height: 40px;
-
+			transition: all .4s ease;
 			&:hover{
-				background-color: #ddd;
+				background-color: #fff;
+				border: 1px solid #333333;
 				cursor: pointer;
+				
+				.button-bar{
+					background-color: $background-menu-color;
+				}
 			}
 			&:focus{
 				outline: none;
 			}
 			.button-bar{
 				display: block;
-				color: #333;
 				width: 22px;
 				height: 2px;
-				background-color: #888;
 				margin-top: 4px;
-				
+				color: #333;
+				background-color: #fff;
+				transition: all .4s ease;
 				&:first-child{
 					margin-top: 0px;
 				}
 			}
 		}
 	}
-
 
 
 	.container-menu{
@@ -66,28 +74,30 @@ header{
 			position: relative;
 			width: 100%;
 			left: 0;
-			background-color: #333;
-
+			background-color: $background-menu-color;
+			border-top: thin solid #666666;
+			
 			ul{
+				display: block;
 				margin: 0;
 				padding: 0;
-				display: block;
+				
 				li{
-
+					
 					a{
-						list-style-type: none;
-						padding: 14px 10px;					
-						text-decoration: none;
-						color: #fff;
-						font-size: 18px;
 						display: block;
+						padding: 14px 10px;
 						font-size: 12px;
 						font-weight: 700;
 						font-family: Montserrat, sans-serif;
+						color: $menu-link-color;
 						text-transform: uppercase;
 						letter-spacing: 1px;
+						list-style-type: none;
+						text-decoration: none;
+						
 						&:hover{
-							background-color: lighten(#333333, 10%);
+							background-color: lighten($background-menu-color, 10%);
 						}
 						i{
 							margin-left: 5px;
@@ -97,25 +107,25 @@ header{
 					ul{
 						display: none;
 					}
+
 					.second-level{
-						background-color: lighten(#333333, 10%);
+						background-color: lighten($background-menu-color, 10%);
 					}
-					// ul.second-level{
-					// 	border-bottom: 1px solid orange;
-					// }
+					
 					ul.second-level li{ 
 						a{
 							padding: 12px 20px;
 							&:hover{
-								background-color: lighten(#333333, 20%);
+								background-color: lighten($background-menu-color, 20%);
 							}
 						}
+
 						.third-level{
-							background-color: lighten(#333333, 20%);
+							background-color: lighten($background-menu-color, 20%);
 							li a{
 								padding: 10px 30px;
 								&:hover{
-									background-color: lighten(#333333, 30%);
+									background-color: lighten($background-menu-color, 30%);
 								}
 							}
 						}
@@ -129,24 +139,7 @@ header{
 
 
 
-
-
-
-section{
-	display: flex;
-	margin-top: 30px;
-	background-color: #333;
-	height: 400px;
-}
-
-
-
-
-/*phone */
-
-@media only screen and (min-width: 768px){
-	
-}
+//  Larger Screens 
 
 @media only screen and (min-width: 992px){
 
@@ -155,68 +148,69 @@ section{
 		justify-content: space-between;
 		padding: 0px 100px;
 		background-color: #333333;
-	}
-	button{
-		display: none;
-	}
+		
+		.logo h2{
+			margin: 5px 0px 0px!important;
+		}
+		
 
-	.second-level{
-		display: none!important;
-	}
+		button{
+			display: none;
+		}
 
-	.third-level{
-		display: none!important;
-	}
+		nav{
+			display: block!important;
 
-	nav{
-		display: block!important;
-	}
-	
-	.main-menu{
-		ul li{
-			float: left;
-			list-style-type: none;
-			margin-left: 10px;
-			a{
-				padding: 25px 10px!important;
-				color: #fff!important;
-				border-bottom: none!important;
-				cursor: pointer;
-			}
-
-			&:hover .second-level{
-				display: block!important;
-			}
-			&:last-child{
-				.second-level:hover .third-level{
-					left: -88%;
-				}
-			}
 			.second-level{
-				position: absolute;
-				li{
-					float: none!important;
-					margin-left: 0px;
-					text-align: center;
-					a{
-						padding: 10px 24px!important;
+				display: none!important;
+			}
+
+			.third-level{
+				display: none!important;
+			}
+
+			ul li{
+				float: left;
+				margin-left: 10px;
+				list-style-type: none;
+				a{
+					padding: 25px 10px!important;
+					border-bottom: none!important;
+					cursor: pointer;
+				}
+
+				&:hover .second-level{
+					display: block!important;
+				}
+
+				&:last-child{
+					.second-level:hover{
+						.third-level{
+							left: -180px;
+						}
 					}
-					&:hover .third-level{
-						position: absolute;
-						display: block!important;
-						left: 100%;
-						margin-top: -34px;
-					}
-					.third-level{
-						
+				}
+
+				.second-level{
+					position: absolute;
+					li{
+						float: none!important;
+						margin-left: 0px;
+						text-align: center;
+						a{
+							width: 180px;
+							padding: 10px 0px!important;
+						}
+
+						&:hover .third-level{
+							position: absolute;
+							display: block!important;
+							left: 100%;
+							margin-top: -34px;
+						}
 					}
 				}
 			}
-
 		}
 	}
 }  
-
-@media only screen and (min-width: 1200px){
-
-} 
